@@ -1,0 +1,33 @@
+<section class="resume-section" id="skills">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Skills</h2>
+        <div class="subheading mb-3">Programming Languages & Tools</div>
+        <table class="table">
+            <tbody *ngFor="let skill of skillModel?.skills">
+              <tr>
+                <th scope="row">{{skill.skillType}}</th>
+                <td><b><a *ngFor="let sk of skill.programmingLanguages" href="" target="_blank">{{sk.name}},</a></b></td>
+              </tr>
+            </tbody>
+          </table>
+        <div class="subheading mb-3">Workflow</div>
+        <ul class="fa-ul mb-0">
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Mobile-First, Responsive Design
+            </li>
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Cross Browser Testing & Debugging
+            </li>
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Cross Functional Teams
+            </li>
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Agile Development & Scrum
+            </li>
+        </ul>
+    </div>
+</section>

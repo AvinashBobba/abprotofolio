@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadDataService } from '../services/load-data.service';
+import { ProjectModel } from '../../models/projects-model';
 
 @Component({
   selector: 'app-experience',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
+  loadDataService : LoadDataService;
+  projectModel : ProjectModel;
 
-  constructor() { }
+  constructor(loadDataService : LoadDataService) { 
+    this.loadDataService = loadDataService;
+  }
 
   ngOnInit(): void {
+    this.loadDataService.getExperienceData().subscribe(
+      data => {
+        this.projectModel=data;
+      }
+    )
   }
 
 }

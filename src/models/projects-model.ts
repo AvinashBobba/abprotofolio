@@ -1,16 +1,16 @@
 export interface ProjectModel 
 {
+    projects : Project[]
+}
+
+export interface Project 
+{
     company : string;
     name : string;
     role : string;
     dateFrom : string;
     dateTo : string;
-    summaries : Summary[];
+    summary : string;
     isActive : boolean;
     isLatest : boolean;
-}
-
-export interface Summary 
-{
-    data : string;
 }

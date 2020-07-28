@@ -22,9 +22,9 @@
   <div class="container-fluid p-0">
       <!-- About-->
       <section class="resume-section" id="about">
-          <div class="resume-section-content">
+          <div *ngIf="aboutDataModel" class="resume-section-content">
               <h1 class="mb-0">
-                  {{aboutDataModel.profileName.firstName}}
+                  {{aboutDataModel?.profileName?.firstName}}
                   <span class="text-primary">{{aboutDataModel.profileName.lastName}}</span>
               </h1>
               <div class="subheading mb-5">

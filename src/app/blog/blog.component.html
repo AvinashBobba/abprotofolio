@@ -1,1 +1,49 @@
-<p>blog works!</p>
+<section class="resume-section" id="articles">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Blogs</h2>
+
+        <ul class="fa-ul mb-0" *ngFor="let blog of blogModel?.blog">
+            <li>
+                <span class="fa-li"><i class="fa fa-rss-square text-warning"></i></span>
+                <a href="https://development-techniques.blogspot.com/2020/06/c-advanced-topics-generics.html" target="_blank"><b>{{blog.name}}</b></a>
+            </li>
+            <!-- <li>
+                <span class="fa-li"><i class="fa fa-rss-square text-warning"></i></span>
+                <a href="https://development-techniques.blogspot.com/2020/06/c-advanced-topics-extension-methods.html" target="_blank"><b>Extension Methods</b> </a>
+            </li>
+            <li>
+                <span class="fa-li"><i class="fa fa-rss-square text-warning"></i></span>
+                <a href="https://development-techniques.blogspot.com/2020/06/c-advanced-topics-delegates.html" target="_blank"><b>Delegate</b></a>
+            </li>
+            <li>
+                <span class="fa-li"><i class="fa fa-rss-square text-warning"></i></span>
+                <a href="https://development-techniques.blogspot.com/2020/06/c-advanced-topics-lambda-expression.html" target="_blank"><b>Lambda Expression</b></a>
+            </li> -->
+        </ul>
+        <div style="padding-top:20px;">
+            <section class="home-newsletter">
+                <div class="container">
+                <div class="row">
+                <div class="col-sm-12">
+                    <div class="single">
+                        <h2>Subscribe to our Newsletter</h2>
+                    <div class="input-group">
+                         <input type="email" class="form-control" placeholder="Enter your email" required="true">
+                         <span class="input-group-btn">
+                            <button class="btn btn-theme" type="submit" (click)="onSubScription()">Subscribe</button>
+                         </span>
+                    </div>
+                    <div style = "color: chocolate;">
+                       <b>{{subscriptionMessage}}</b>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+</section>

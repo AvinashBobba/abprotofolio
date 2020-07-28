@@ -41,6 +41,20 @@ getExperienceData(){
    ));
 }
 
+getBlogDetails(){
+  var file = "https://abprotofolio.blob.core.windows.net/content/blogs.json";
+  return this.httpClient
+   .get<any>(file)
+   .pipe(tap(
+     data => {
+       console.log(data);
+     },
+     error => {
+       console.log(error);
+     }
+   ));
+}
+
 getSkillsData(){
   var file = "https://abprotofolio.blob.core.windows.net/content/skill.json";
   return this.httpClient

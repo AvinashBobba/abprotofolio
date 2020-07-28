@@ -6,7 +6,7 @@
             <tbody *ngFor="let skill of skillModel?.skills">
               <tr>
                 <th scope="row">{{skill.skillType}}</th>
-                <td><b><a *ngFor="let sk of skill.programmingLanguages" href="" target="_blank">{{sk.name}},</a></b></td>
+                <td><b><a *ngFor="let sk of skill.programmingLanguages" href="https://www.google.com/search?q={{sk.name}}" target="_blank">{{sk.name}},</a></b></td>
               </tr>
             </tbody>
           </table>

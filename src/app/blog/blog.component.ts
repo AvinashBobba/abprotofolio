@@ -9,6 +9,7 @@ import { BlogModel } from '../../models/blog-model';
 })
 export class BlogComponent implements OnInit {
   subscriptionMessage : string;
+  subscriptionEmail : string;
   loadDataService : LoadDataService;
   blogModel : BlogModel;
   constructor(loadDataService : LoadDataService) {

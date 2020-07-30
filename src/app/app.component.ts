@@ -9,6 +9,7 @@ import { AboutModel } from 'src/models/about-model';
 })
 export class AppComponent  implements OnInit  {
   title = 'abprotofolioapp';
+  randomNumber : number;
   aboutDataService : LoadDataService;
   aboutDataModel : AboutModel;
   constructor(aboutData: LoadDataService){
@@ -19,5 +20,7 @@ export class AppComponent  implements OnInit  {
     this.aboutDataService.getAboutPageData().subscribe(data => {
       this.aboutDataModel = data;
     })
+
+    this.randomNumber = Math.floor(Math.random() * 2) + 1  
   }
 }

@@ -11,6 +11,7 @@ export interface SocialNetwork
     linkedin: string;
     gitHub: string;
     twitter: string;
+    stackexchange: string;
 }
 
 export interface Address 

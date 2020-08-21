@@ -5,7 +5,7 @@
         <ul class="fa-ul mb-0" *ngFor="let blog of blogModel?.blog">
             <li>
                 <span class="fa-li"><i class="fa fa-rss-square text-warning"></i></span>
-                <a href="blog.url" target="_blank"><b>{{blog.name}}</b></a>
+                <a href="{{blog.url}}" target="_blank"><b>{{blog.name}}</b></a>
             </li>
         </ul>
         <div style="padding-top:20px;">
